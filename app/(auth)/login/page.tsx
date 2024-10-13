@@ -2,7 +2,10 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
+import googleLogo from '../icons/google.svg';
+import facebookLogo from '../icons/facebook.svg';
 import '../../globals.css';
 
 export default function Login() {
@@ -21,7 +24,7 @@ export default function Login() {
         return emailRegex.test(email) && noCyrillicRegex.test(email);
     };
 
-	function validatePassword(password:string) {
+	const validatePassword = (password:string): boolean => {
 		// Минимальная длина 8 символов
 		const minLength = 8;
 	  
@@ -83,7 +86,7 @@ export default function Login() {
 
 	return (
 		<section className="bg-gray-50 h-full box-border">
-			<div className="flex flex-col items-center justify-center px-6 py-56 mx-auto md:h-screen lg:py-0">
+			<div className="flex flex-col items-center justify-center px-6 py-11 mx-auto md:h-screen lg:py-0">
 				<a href="#" className="flex items-center mb-6 text-2xl font-semibold text-gray-900">
 					<img className="w-8 h-8 mr-2" src="https://cdn-icons-png.flaticon.com/128/2773/2773663.png" alt="logo"/>
 					Yoga  
@@ -116,6 +119,11 @@ export default function Login() {
 								</div>
 								<a href="#" className="text-sm font-medium text-primary-600 hover:underline">Forgot password?</a>
 							</div>
+							<div className="divider">OR</div>
+                            <div className='flex justify-around flex-wrap gap-4'>
+                                <button className="btn"><Image src={googleLogo} alt="google_logo" width={34.5} height={34.5}></Image>Login with Google</button>
+                                <button className="btn"><Image src={facebookLogo} alt="facebook_logo" width={20} height={20}></Image>Login with Facebook</button>
+                            </div>
 							<button onClick={handleSubmit} type="submit" className="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
 	 						Sign in</button>
 							<p className="text-sm font-light text-gray-500">

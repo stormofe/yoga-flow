@@ -1,6 +1,12 @@
+import Navbar from "@/app/layouts/navbar/layout";
+
 const Settings = () => {
     return (
-        <h1>Settings!</h1>
+        <div>
+            <h1>Settings!</h1>
+
+            <Navbar/>   
+        </div>
     );
 }
 

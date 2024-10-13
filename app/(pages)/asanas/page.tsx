@@ -1,6 +1,12 @@
+import Navbar from "@/app/layouts/navbar/layout";
+
 const Asanas = () => {
     return (
-        <h1>Asanas Page</h1>
+        <div>
+            <h1>Asanas Page</h1>
+
+            <Navbar/>
+        </div>
     );
 }
 
