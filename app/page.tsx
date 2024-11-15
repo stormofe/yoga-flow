@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import Navbar from "./layouts/navbar/layout";
 
+import flexibilityBackground from "./img/bg/back-flexibility.jpg";
 import playIcon from "./icons/play.svg";
 
 export default function Home() {
@@ -99,12 +100,25 @@ export default function Home() {
 			</section>
 			
 			
-			<section>
-				<div className="head">
-					<div className="title">Plans for you</div>
-					<Link href="./"></Link>
+			<section className="my-5">
+				<div className="flex justify-between px-2">
+					<h2 className="text-lg font-bold">Plans for you</h2>
+					<Link href="./">All plans</Link>
 				</div>
 				
+				<div className="cards">
+					<div className="card my-4 p-2 card-compact image-full shadow-xl bg-base-100">
+						<figure>
+							<Image alt="bg" className="object-fill" src={flexibilityBackground} width={350} height={300}></Image>
+						</figure>
+						<div className="card-body">
+							<p className="card-title">Back flexibility</p>
+						
+							<div>Amount of callories</div>
+							<div>Duration</div>
+						</div>
+					</div>
+				</div>
 			</section>
 
 			<Navbar/>

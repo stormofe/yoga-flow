@@ -35,7 +35,7 @@ export default function Navbar() {
         }
     }, [currentPage]);
     return (
-        <div className="btm-nav">
+        <div className="btm-nav ">
             {page.asanas ?
                 <button className="active bg-pink-200 text-pink-600">
                     <Image src={asanasIco} alt="asanasIcon" width={20} height={20}/>
