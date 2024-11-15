@@ -76,25 +76,25 @@ export default function Home() {
 				</label>
 			</section>
 			
-			<section>
-				<div className="card bg-purple-500 w-96 shadow-xl mx-auto mt-6 flex-row">
-					<div className="card-body">
-						<div className="card-title text-white">My Plan For Today</div>
-						<div className="description text-slate-200">1/7 Complete</div>
+			<section className="flex gap-2 px-2">
+				<div className="card bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 w-full shadow-xl mx-auto mt-6 flex-row">
+					<div className="card-body p-2">
+						<p className="card-title text-sm text-white">My Plan For Today</p>
+						<p className="text-slate-200">1/7 Complete</p>
 					</div>
 					<figure>
-						<div className="radial-progress mr-4 text-purple-300" style={{ "--value": 70}} role="progressbar">
-							70%
-						</div>
+							<div className="radial-progress mr-4 text-black" style={{ "--value": 70, "--size": "50px"}} role="progressbar">
+								70%
+							</div>
 					</figure>
 				</div>
 
-				<div className="card mx-auto w-96 shadow-xl bg-slate-600 mt-6">
-					<div className="card-body">
-						<div className="card-title text-white">Last training</div>
+				<div className="card mx-auto w-full shadow-xl bg-slate-600 mt-6">
+					<div className="card-body p-2">
+						<p className="card-title text-sm text-white">Last training</p>
 						<p className="text-slate-200">content</p>
+						<span className="badge"><Image src={playIcon} alt="Play icon" width={15} height={15}></Image></span>
 					</div>
-					<span className="badge ml-80"><Image src={playIcon} alt="Play icon" width={15} height={15}></Image></span>
 				</div>
 			</section>
 			
